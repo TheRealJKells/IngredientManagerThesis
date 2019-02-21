@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedAppThesis.Views.SearchPage"
+              Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Text="Add Recipe1" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"
+                    Text="add new ingredient box"
+                    FontSize="10"
+                    Clicked="Button_Clicked_1"/>
+                <Button Grid.Row="0" Grid.Column="1"
+                    Text="remove new ingredient box"
+                    FontSize="10"
+                    Clicked="Button_Clicked_2"/>
+            </Grid>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="ingredientList">
+                    <Entry x:Name="ingredientEntryOne"
+                   Placeholder="Enter in an ingredient" />
+                </StackLayout>
+            </ScrollView>
+            <Button Text="Search" FontAttributes="Bold" Clicked="Button_Clicked"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
