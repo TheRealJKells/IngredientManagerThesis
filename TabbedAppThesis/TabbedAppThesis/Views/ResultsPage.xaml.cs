@@ -27,6 +27,7 @@ namespace TabbedAppThesis.Views
                     Text = ingredientList.ElementAt(i)
                 };
                 //ingredientStack.Children.Add(myLabel);
+                //I am adding some more stuff
             }
 
         }
