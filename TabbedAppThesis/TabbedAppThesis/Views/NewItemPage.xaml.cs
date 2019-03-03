@@ -31,5 +31,10 @@ namespace TabbedAppThesis.Views
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();
         }
+
+        async void GoBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

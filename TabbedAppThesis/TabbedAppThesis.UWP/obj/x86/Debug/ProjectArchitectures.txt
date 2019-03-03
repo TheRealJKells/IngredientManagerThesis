@@ -1,0 +1,1 @@
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\TabbedAppThesis.UWP.csproj;x86

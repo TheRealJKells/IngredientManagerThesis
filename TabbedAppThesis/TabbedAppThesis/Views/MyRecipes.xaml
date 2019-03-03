@@ -19,11 +19,12 @@
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
                  HasUnevenRows="true"
-                 RefreshCommand="{Binding LoadItemsCommand}"
+                 ItemSelected="OnItemSelected">
+                 <!--RefreshCommand="{Binding LoadItemsCommand}"
                  IsPullToRefreshEnabled="true"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                 CachingStrategy="RecycleElement"
-                 ItemSelected="OnItemSelected">
+                 CachingStrategy="RecycleElement"-->
+                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
