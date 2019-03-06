@@ -5,9 +5,8 @@
              Title="Results">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+        <StackLayout x:Name="ResultsStack">
+            <Label FontSize="Large" Text="These are the ingredients you searched for: "
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

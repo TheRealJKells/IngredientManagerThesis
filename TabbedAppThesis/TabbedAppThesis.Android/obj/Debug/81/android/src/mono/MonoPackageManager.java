@@ -108,6 +108,7 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "TabbedAppThesis.Android.dll" comes first in this list. */
 		"TabbedAppThesis.Android.dll",
 		"FormsViewGroup.dll",
+		"LiteDB.dll",
 		"TabbedAppThesis.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",

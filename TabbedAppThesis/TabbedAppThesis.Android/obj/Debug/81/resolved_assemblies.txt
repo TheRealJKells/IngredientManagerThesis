@@ -1,6 +1,7 @@
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\TabbedAppThesis.Android.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\FormsViewGroup.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Java.Interop.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\LiteDB.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\mscorlib.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Core.dll
@@ -31,10 +32,6 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Andr
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Net.Http.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Mono.Security.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\netstandard.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Data.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Numerics.dll
@@ -42,4 +39,8 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Andr
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.IO.Compression.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Net.Http.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Runtime.Serialization.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.ServiceModel.Internals.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\System.Web.Services.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Mono.Security.dll

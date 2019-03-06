@@ -4,7 +4,7 @@
              x:Class="TabbedAppThesis.Views.NewItemPage">
     <!--Title="New Item">-->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Go Back" Clicked="GoBack_Clicked"/>
+        <ToolbarItem Text="Back     " Clicked="GoBack_Clicked"/>
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>

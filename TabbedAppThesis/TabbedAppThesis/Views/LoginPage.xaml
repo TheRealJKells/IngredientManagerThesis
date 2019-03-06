@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbedAppThesis.Views.LoginPage"
+             Title="Login">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+    </ContentPage.ToolbarItems>
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Label Text="Username" />
+                <Entry x:Name="usernameEntry" 
+                       Placeholder="username" 
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Password" />
+                <Entry x:Name="passwordEntry" 
+                       IsPassword="true" 
+                       Placeholder="password"
+                       HorizontalTextAlignment="Center"/>
+                <Button Text="Login" 
+                        Clicked="OnLoginButtonClicked" 
+                        HorizontalOptions="Center"
+                        BorderColor="DarkBlue"
+                        BackgroundColor="SkyBlue"
+                        TextColor="Black"/>
+                <Label x:Name="messageLabel" 
+                       TextColor="Red"
+                       FontSize="Large"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

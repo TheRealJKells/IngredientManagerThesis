@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TabbedAppThesis.Models;
 using TabbedAppThesis.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TabbedAppThesis.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ResultsPage : ContentPage
 	{
         ItemsViewModel viewModel;
         List<String> ingredientList;
+        public ResultsPage()
+        {
+            InitializeComponent();
+        }
+
         public ResultsPage(List<String> myList)
         {
             InitializeComponent();
@@ -26,7 +30,7 @@ namespace TabbedAppThesis.Views
                 {
                     Text = ingredientList.ElementAt(i)
                 };
-                //ingredientStack.Children.Add(myLabel);
+                ResultsStack.Children.Add(myLabel);
                 //I am adding some more stuff
             }
 
@@ -34,17 +38,18 @@ namespace TabbedAppThesis.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            //if (!(args.SelectedItem is Recipe item))
-            //    return;
+            if (!(args.SelectedItem is Item item))
+                return;
 
-            //await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-            // Manually deselect item.
+            //Manually deselect item.
             //ItemsListView.SelectedItem = null;
         }
 
         protected override void OnAppearing()
         {
+
             base.OnAppearing();
 
             //if (viewModel.Recipes.Count == 0)

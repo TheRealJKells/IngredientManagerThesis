@@ -298,3 +298,7 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\LiteDB.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Core.pdb
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.pdb
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.pdb

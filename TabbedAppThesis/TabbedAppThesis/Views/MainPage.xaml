@@ -3,6 +3,9 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:views="clr-namespace:TabbedAppThesis.Views"
             x:Class="TabbedAppThesis.Views.MainPage">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="Logout_Clicked"/>
+    </TabbedPage.ToolbarItems>
     <TabbedPage.Children>
         <NavigationPage Title="Recipe Search">
             <NavigationPage.Icon>

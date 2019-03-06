@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabbedAppThesis.Views.SearchPage"
-              Title="{Binding Title}"
-             x:Name="BrowseItemsPage">
+              x:Name="BrowseItemsPage"
+              Title="{Binding Title}">
+
     <ContentPage.ToolbarItems>
         <!--<ToolbarItem Text="Add Recipe1" Clicked="AddItem_Clicked">
             <ToolbarItem.Icon>
@@ -14,7 +15,7 @@
         </ToolbarItem>-->
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="0, 5, 0, 0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -27,11 +28,17 @@
                 <Button Grid.Row="0" Grid.Column="0"
                     Text="add new ingredient box"
                     FontSize="10"
-                    Clicked="Button_Clicked_1"/>
+                    Clicked="Button_Clicked_1"
+                    BorderColor="DarkBlue"
+                    BackgroundColor="SkyBlue"
+                        TextColor="Black"/>
                 <Button Grid.Row="0" Grid.Column="1"
                     Text="remove new ingredient box"
                     FontSize="10"
-                    Clicked="Button_Clicked_2"/>
+                    Clicked="Button_Clicked_2"
+                        BorderColor="DarkBlue"
+                        BackgroundColor="SkyBlue"
+                        TextColor="Black"/>
             </Grid>
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="ingredientList">
