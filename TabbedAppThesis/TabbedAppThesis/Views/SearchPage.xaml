@@ -46,6 +46,9 @@
                    Placeholder="Enter in an ingredient" />
                 </StackLayout>
             </ScrollView>
+            <Label Text="{Binding WelcomeText}"
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
             <Button Text="Search" FontAttributes="Bold" Clicked="Button_Clicked"
                     HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>

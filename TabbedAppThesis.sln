@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedAppThesis.iOS", "Tabb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedAppThesis.UWP", "TabbedAppThesis\TabbedAppThesis.UWP\TabbedAppThesis.UWP.csproj", "{CC65DEA7-F440-4502-92AE-7FDBDA3748ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabbedAppThesis", "TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.csproj", "{F2CD5C4E-CCEF-48AE-81F3-6BD8B8308873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabbedAppThesis", "TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.csproj", "{F2CD5C4E-CCEF-48AE-81F3-6BD8B8308873}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

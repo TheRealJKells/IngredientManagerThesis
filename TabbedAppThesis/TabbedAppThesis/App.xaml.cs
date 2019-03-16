@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using TabbedAppThesis.Views;
 using TabbedAppThesis.Services;
 using LiteDB;
+using LoginNavigation;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TabbedAppThesis
@@ -11,7 +12,9 @@ namespace TabbedAppThesis
     public partial class App : Application
     {
         public static bool IsUserLoggedIn { get; internal set; }
+        public static User sessionUser { get; internal set; }
         static LiteDBHelper db;
+        
 
         public App()
         {
@@ -25,7 +28,6 @@ namespace TabbedAppThesis
             {
                 MainPage = new MainPage();
             }
-           
         }
 
         public static LiteDBHelper LiteDB

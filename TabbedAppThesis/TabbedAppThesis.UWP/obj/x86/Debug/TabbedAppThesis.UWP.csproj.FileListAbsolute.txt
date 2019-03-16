@@ -8,6 +8,7 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Core\AppxManifest.xml
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Core\TabbedAppThesis.UWP.exe
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\TabbedAppThesis.UWP.build.appxrecipe
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\LiteDB.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\clrcompression.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Microsoft.CSharp.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Microsoft.VisualBasic.dll
@@ -173,9 +174,12 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\mscorlib.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\netstandard.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Core.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Core.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Platform.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\TabbedAppThesis.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\TabbedAppThesis.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\TabbedAppThesis.UWP.csprojAssemblyReference.cache
@@ -298,7 +302,3 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\LiteDB.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Core.pdb
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP.pdb
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Xamarin.Forms.Xaml.pdb

@@ -37,6 +37,8 @@ namespace TabbedAppThesis.Views
             if (isValid)
             {
                 App.IsUserLoggedIn = true;
+                User loginUser = App.LiteDB.GetUser(user);
+                App.sessionUser = loginUser;
                 //Navigation.InsertPageBefore(new TabbedAppThesis.Views.MainPage(), this);
                 //await Navigation.PopAsync();
                 await Navigation.PushModalAsync(new MainPage());

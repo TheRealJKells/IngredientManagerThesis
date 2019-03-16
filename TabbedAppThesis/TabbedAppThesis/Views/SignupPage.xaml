@@ -8,10 +8,13 @@
             <Label Text="Username" />
             <Entry x:Name="usernameEntry" Placeholder="username" />
             <Label Text="Password" />
-            <Entry x:Name="passwordEntry" IsPassword="true" />
+            <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="password"/>
             <Label Text="Email address" />
-            <Entry x:Name="emailEntry" />
-            <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+            <Entry x:Name="emailEntry" Placeholder="Example@example.com"/>
+            <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" 
+                    HorizontalOptions="Center"
+                    BackgroundColor="SkyBlue"
+                    TextColor="Black"/>
             <Label x:Name="messageLabel" />
         </StackLayout>
     </ContentPage.Content>

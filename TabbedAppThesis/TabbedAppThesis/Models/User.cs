@@ -13,5 +13,6 @@ namespace LoginNavigation
 		public string Email { get; set; }
 
         public List<int> RecipesUsed { get; set; }
+        public List<int> RecipesCreated { get; set; }
 	}
 }

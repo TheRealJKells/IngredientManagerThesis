@@ -13,7 +13,9 @@ using TabbedAppThesis.Services;
 using TabbedAppThesis.Models;
 using LoginNavigation;
 using System.IO;
+using TabbedAppThesis.Droid;
 
+[assembly: Xamarin.Forms.Dependency(typeof(DatabaseAccess))]
 namespace TabbedAppThesis.Droid
 {
     class DatabaseAccess : IDatabaseAccess
