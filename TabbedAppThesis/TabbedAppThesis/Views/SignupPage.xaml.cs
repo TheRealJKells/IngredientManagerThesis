@@ -27,8 +27,8 @@ namespace TabbedAppThesis.Views
                 Username = usernameEntry.Text,
                 Password = passwordEntry.Text,
                 Email = emailEntry.Text,
-                RecipesCreated = new List<int>(),
-                RecipesUsed = new List<int>()
+                RecipesCreated = new List<Guid>(),
+                RecipesUsed = new List<Guid>()
             };
 
             // Sign up logic goes here
@@ -60,7 +60,7 @@ namespace TabbedAppThesis.Views
             }
             isUserTaken = false;
 
-            if (!App.LiteDB.getUserByUsername(user.Username))
+            if (!App.LiteDB.GetUserByUsername(user.Username))
             {
                 isEmailTaken = true;
             }

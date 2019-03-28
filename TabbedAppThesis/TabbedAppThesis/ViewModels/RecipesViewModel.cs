@@ -13,16 +13,13 @@ namespace TabbedAppThesis.ViewModels
 {
     public class RecipesViewModel : BaseViewModel
     {
-        //public List<Recipe> Recipes { get; set; }
         public ObservableCollection<Recipe> Recipes { get; set; }
 
         public RecipesViewModel()
         {
-            
-            Title = App.sessionUser.Username + "'s Recipes";
+            Title = App.SessionUser.Username + "'s Recipes";
             Recipes = new ObservableCollection<Recipe>();
-            
-
+           
             if (App.LiteDB.GetAllRecipes().Count == 0)
             {
                 var mockRecipes = new List<Recipe>
@@ -32,10 +29,10 @@ namespace TabbedAppThesis.ViewModels
                      new Recipe {Name = "Alex salad", Description = "Yummy yummy", HowTo = "Mix Alex and salad",
                      IngredientList = new List<string> {"Alex", "salad"}, IsVegan = true, IsVegetarian = true, TimeToMake = 12},
                 };
-                User user = App.LiteDB.getUserByUsernameUser("user");
+                User user = App.LiteDB.GetUserByUsernameUser("user");
                 foreach (Recipe r in mockRecipes)
                 {
-                    App.LiteDB.addRecipe(r);
+                    App.LiteDB.AddRecipe(r);
                 }
              
                 foreach(Recipe r in App.LiteDB.GetAllRecipes())
@@ -43,15 +40,23 @@ namespace TabbedAppThesis.ViewModels
                     user.RecipesCreated.Add(r.ID);
                 }
                 App.LiteDB.UpdateUser(user);
-            }
-         
-            
+            } 
         }
        
-        public void ExecuteLoadRecipes()
+        public void ExecuteLoadRecipesUser()
         {
             List<Recipe> recipes = new List<Recipe>();
-            recipes = App.LiteDB.GetRecipesBySessionID(App.sessionUser.ID);
+            recipes = App.LiteDB.GetRecipesBySessionID();
+            foreach (Recipe r in recipes)
+            {
+                Recipes.Add(r);
+            }
+        }
+        public void ExecuteLoadRecipesSearch(List<string> ingredientNames)
+        {
+            IEnumerable<Recipe> recipes = new List<Recipe>();
+            
+            recipes = App.LiteDB.GetRecipesByIngredientName(ingredientNames);
             foreach (Recipe r in recipes)
             {
                 Recipes.Add(r);

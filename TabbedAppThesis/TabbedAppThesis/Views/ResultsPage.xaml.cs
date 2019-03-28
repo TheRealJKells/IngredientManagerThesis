@@ -11,7 +11,8 @@ namespace TabbedAppThesis.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ResultsPage : ContentPage
 	{
-        ItemsViewModel viewModel;
+        //ItemsViewModel viewModel;
+        RecipesViewModel viewModel2;
         List<String> ingredientList;
         public ResultsPage()
         {
@@ -22,7 +23,8 @@ namespace TabbedAppThesis.Views
         {
             InitializeComponent();
             ingredientList = myList;
-            BindingContext = viewModel = new ItemsViewModel();
+            //BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel2 = new RecipesViewModel();
 
             for (int i = 0; i < ingredientList.Count; i++)
             {
@@ -30,7 +32,7 @@ namespace TabbedAppThesis.Views
                 {
                     Text = ingredientList.ElementAt(i)
                 };
-                ResultsStack.Children.Add(myLabel);
+                //ResultsStack.Children.Add(myLabel);
                 //I am adding some more stuff
             }
 
@@ -38,10 +40,10 @@ namespace TabbedAppThesis.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            if (!(args.SelectedItem is Item item))
+            if (!(args.SelectedItem is Recipe recipe))
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await Navigation.PushAsync(new ItemDetailPage(new RecipeDetailViewModel(recipe)));
 
             //Manually deselect item.
             //ItemsListView.SelectedItem = null;
@@ -51,6 +53,8 @@ namespace TabbedAppThesis.Views
         {
 
             base.OnAppearing();
+            viewModel2.Recipes.Clear();
+            viewModel2.ExecuteLoadRecipesSearch(ingredientList);
 
             //if (viewModel.Recipes.Count == 0)
             //    viewModel.LoadItemsCommand.Execute(null);

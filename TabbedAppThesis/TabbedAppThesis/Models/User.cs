@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using LiteDB;
+using System;
+using System.Collections.Generic;
 
 namespace LoginNavigation
 {
 	public class User
 	{
-        public int ID { get; set; }
+        [BsonId]
+        public Guid ID { get; set; }
 
 		public string Username { get; set; }
 
@@ -12,7 +15,7 @@ namespace LoginNavigation
 
 		public string Email { get; set; }
 
-        public List<int> RecipesUsed { get; set; }
-        public List<int> RecipesCreated { get; set; }
+        public List<Guid> RecipesUsed { get; set; }
+        public List<Guid> RecipesCreated { get; set; }
 	}
 }

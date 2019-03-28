@@ -10,7 +10,7 @@ namespace TabbedAppThesis.ViewModels
         public SearchViewModel()
         {
             Title = "Recipe Search";
-            WelcomeText = "Welcome " + App.sessionUser.Username + "!";
+            WelcomeText = "Welcome " + App.SessionUser.Username + "!";
         }
 
         

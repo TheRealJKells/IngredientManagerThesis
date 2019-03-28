@@ -16,7 +16,7 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="ItemsListView" 
-                ItemsSource="{Binding Items}"
+                ItemsSource="{Binding Recipes}"
                 VerticalOptions="FillAndExpand"
                  HasUnevenRows="true"
                  ItemSelected="OnItemSelected">
@@ -29,7 +29,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
-                                <Label Text="{Binding Text}" 
+                                <Label Text="{Binding Name}" 
                                    LineBreakMode="NoWrap" 
                                    FontSize="16" 
                                    Style="{DynamicResource ListItemTextStyle}"/>

@@ -11,9 +11,9 @@ namespace TabbedAppThesis.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        RecipeDetailViewModel viewModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(RecipeDetailViewModel viewModel)
         {
             InitializeComponent();
 
@@ -24,13 +24,13 @@ namespace TabbedAppThesis.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var recipe = new Recipe
             {
-                Text = "Item 1",
+                Name = "Item 1",
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new RecipeDetailViewModel(recipe);
             BindingContext = viewModel;
         }
     }

@@ -38,7 +38,13 @@ namespace TabbedAppThesis.Views
             {
                 App.IsUserLoggedIn = true;
                 User loginUser = App.LiteDB.GetUser(user);
-                App.sessionUser = loginUser;
+                //App.sessionUser = loginUser;
+                App.SessionUser.Email = loginUser.Email;
+                App.SessionUser.ID = loginUser.ID;
+                App.SessionUser.Password = loginUser.Password;
+                App.SessionUser.RecipesCreated = loginUser.RecipesCreated;
+                App.SessionUser.RecipesUsed = loginUser.RecipesUsed;
+                App.SessionUser.Username = loginUser.Username;
                 //Navigation.InsertPageBefore(new TabbedAppThesis.Views.MainPage(), this);
                 //await Navigation.PopAsync();
                 await Navigation.PushModalAsync(new MainPage());

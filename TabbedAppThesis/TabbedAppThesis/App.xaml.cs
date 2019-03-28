@@ -12,7 +12,7 @@ namespace TabbedAppThesis
     public partial class App : Application
     {
         public static bool IsUserLoggedIn { get; internal set; }
-        public static User sessionUser { get; internal set; }
+        public static User SessionUser = new User();
         static LiteDBHelper db;
         
 

@@ -18,25 +18,25 @@ namespace TabbedAppThesis.Services
             
             var db = new LiteDatabase(dbPath);
             
-                userCollection = db.GetCollection<User>("Users");
-                recipeCollection = db.GetCollection<Recipe>("Recipes");
-                List<User> users = new List<User>();
-                users = GetAllUsers();
-                if (users.Count == 0)
+            userCollection = db.GetCollection<User>("Users");
+            recipeCollection = db.GetCollection<Recipe>("Recipes");
+            List<User> users = new List<User>();
+            List<Recipe> recipes = new List<Recipe>();
+            users = GetAllUsers();
+            if (users.Count == 0)
+            {
+                User user = new User()
                 {
-                    User user = new User()
-                    {
-                        Username = "user",
-                        Password = "a",
-                        RecipesUsed = new List<int>(),
-                        RecipesCreated = new List<int>(),
-                        Email = "user@carthage.edu",
+                    Username = "user",
+                    Password = "a",
+                    RecipesUsed = new List<Guid>(),
+                    RecipesCreated = new List<Guid>(),
+                    Email = "user@carthage.edu",
 
-                    };
-                    Adduser(user);
-                }
+                };
+                Adduser(user);
+            }
             
-
         }
 
         //Get All users
@@ -58,12 +58,13 @@ namespace TabbedAppThesis.Services
             userCollection.Update(user);
         }
         //Get recipes the user has created
-        public List<Recipe> GetRecipesBySessionID(int ID)
+        public List<Recipe> GetRecipesBySessionID()
         {
             List<Recipe> recipes = new List<Recipe>();
-            foreach (int i in App.sessionUser.RecipesCreated)
+            foreach (Guid i in App.SessionUser.RecipesCreated)
             {
-                recipes.Add(GetRecipesByRecipeID(ID));
+                
+                recipes.Add(GetRecipesByRecipeID(i));
             }
            
             return recipes;
@@ -88,10 +89,12 @@ namespace TabbedAppThesis.Services
         }
 
         //get user by ID
-        public User GetUserByID(int ID)
+        public User GetUserByID(Guid ID)
         {
             userCollection.EnsureIndex(x => x.ID);
-            var User = userCollection.Find(Query.Where("ID", i => i.Equals(ID))).FirstOrDefault();
+            User User = userCollection.Find(Query.Where("ID", 
+                i => i.Equals(ID)))
+                .FirstOrDefault();
 
             return User;
         }
@@ -111,7 +114,7 @@ namespace TabbedAppThesis.Services
         }
 
         //get user by username (check to see if it is taken)
-        public bool getUserByUsername(string userName)
+        public bool GetUserByUsername(string userName)
         {
             bool retVal = true;
             userCollection.EnsureIndex(x => x.Username);
@@ -125,7 +128,7 @@ namespace TabbedAppThesis.Services
             return retVal;
         }
         //return user by username
-        public User getUserByUsernameUser(string userName)
+        public User GetUserByUsernameUser(string userName)
         {
             userCollection.EnsureIndex(x => x.Username);
             var User = userCollection.Find(Query.Where("Username", i => i.Equals(userName))).FirstOrDefault();
@@ -133,17 +136,39 @@ namespace TabbedAppThesis.Services
             return User;
         }
         //Delete user
-        public void DeleteUser(int ID)
+        public void DeleteUser(Guid ID)
         {
             userCollection.Delete(a => a.ID == ID);
         }
 
         //Recipes functions
         //*******************************************
-        public Recipe GetRecipesByRecipeID(int ID)
+        public IEnumerable<Recipe> GetRecipesByIngredientName(List<string> names)
+        {
+            IEnumerable<Recipe> recipes = recipeCollection.Find(i => i.IngredientList.Contains(names.First()));
+            
+            int counter = 1;
+            List<Recipe> newList = new List<Recipe>();
+            while(counter != names.Count)
+            {
+                newList = new List<Recipe>();
+                foreach (Recipe r in recipes)
+                {
+                    if (r.IngredientList.Contains(names.ElementAt(counter)))
+                    {
+                        newList.Add(r);
+                    }
+                }
+                recipes = newList;
+                counter++;
+            }
+           
+            return recipes;
+        }
+        public Recipe GetRecipesByRecipeID(Guid ID)
         {
             recipeCollection.EnsureIndex(i => i.ID);
-            var recipe = recipeCollection.Find(Query.Where("ID", i => i.Equals(ID))).FirstOrDefault();
+            var recipe = recipeCollection.Find(i => i.ID.Equals(ID)).First();
 
             return recipe;
         }
@@ -155,9 +180,14 @@ namespace TabbedAppThesis.Services
             return recipes;
         }
 
-        public void addRecipe(Recipe recipe)
+        public void AddRecipe(Recipe recipe)
         {
             recipeCollection.Insert(recipe);
+        }
+
+        public void DeleteRecipe(Guid ID)
+        {
+            recipeCollection.Delete(a => a.ID == ID);
         }
     }
 }

@@ -4,9 +4,20 @@
              x:Class="TabbedAppThesis.Views.ItemDetailPage"
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Text:" FontSize="Medium" />
-        <Label Text="{Binding Item.Text}" FontSize="Small"/>
+        <Label Text="Name:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.Name}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Item.Description}" FontSize="Small"/>
+        <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
+        <Label Text="How to make:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
+        <Label Text="Time to make:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
+        <!--<Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
+        <Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
+        <Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Recipe.Description}" FontSize="Small"/>-->
+
     </StackLayout>
 </ContentPage>

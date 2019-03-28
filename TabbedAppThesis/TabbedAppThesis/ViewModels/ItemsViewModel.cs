@@ -17,7 +17,7 @@ namespace TabbedAppThesis.ViewModels
 
         public ItemsViewModel()
         {
-            Title = App.sessionUser.Username + "'s Recipes";
+            Title = App.SessionUser.Username + "'s Recipes";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
