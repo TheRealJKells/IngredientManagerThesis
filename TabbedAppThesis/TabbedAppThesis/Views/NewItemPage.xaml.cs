@@ -5,22 +5,29 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using TabbedAppThesis.Models;
+using LoginNavigation;
 
 namespace TabbedAppThesis.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Recipe Recipe { get; set; }
 
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Recipe = new Recipe
             {
-                Text = "Item name",
-                Description = "This is an item description."
+
+                Name = "Recipe name",
+                Description = "This is a recipe description.",
+                TimeToMake = 0,
+                IsVegan = false,
+                IsVegetarian = false,
+                IngredientList = new List<string>(),
+                HowTo = "Example How To"
             };
 
             BindingContext = this;
@@ -28,7 +35,18 @@ namespace TabbedAppThesis.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+            App.LiteDB.AddRecipe(Recipe);
+            List<Recipe> recipes = new List<Recipe>(App.LiteDB.GetRecipesBySessionID());
+            List<Guid> id = new List<Guid>();
+            foreach (Recipe r in recipes)
+            {
+                id.Add(r.ID);
+            }
+            id.Add(Recipe.ID);
+            //User user = new User();
+            //user = App.LiteDB.GetUserByID(App.SessionUser.ID);
+            App.SessionUser.RecipesCreated = id;
+            App.LiteDB.UpdateUser(App.SessionUser);
             await Navigation.PopModalAsync();
         }
 

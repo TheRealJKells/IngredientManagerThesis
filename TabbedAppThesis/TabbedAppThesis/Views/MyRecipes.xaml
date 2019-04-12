@@ -28,17 +28,54 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Name}" 
-                                   LineBreakMode="NoWrap" 
-                                   FontSize="16" 
-                                   Style="{DynamicResource ListItemTextStyle}"/>
+                       
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                              
+                                <Label Text="{Binding Name}"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       LineBreakMode="NoWrap" 
+                                       FontSize="16" 
+                                       HorizontalOptions="Start"
+                                       FontAttributes="Bold"
+                                       Style="{DynamicResource ListItemTextStyle}"/>
 
                                 <Label Text="{Binding Description}" 
-                                   LineBreakMode="NoWrap"
-                                   FontSize="13"
-                                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-                            </StackLayout>
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Margin="0,30,0,0"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="13"
+                                       HorizontalOptions="Start"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                <Button Text="Delete"
+                                        Grid.Row="0"
+                                        Grid.Column="4"
+                                        Clicked="Button_Clicked_Delete"
+                                        BackgroundColor="Red"
+                                        BorderColor="Black"
+                                        WidthRequest="80"
+                                        HorizontalOptions="End"/>
+                                <Button Text="Edit"
+                                        Grid.Row="0"
+                                        Grid.Column="3"
+                                        Clicked="Button_Clicked_Edit"
+                                        BackgroundColor="SkyBlue"
+                                        BorderColor="DarkBlue"
+                                        WidthRequest="80"
+                                        
+                                        HorizontalOptions="End"/>
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

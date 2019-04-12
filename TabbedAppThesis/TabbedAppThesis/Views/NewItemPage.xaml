@@ -8,11 +8,23 @@
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Name" FontSize="Medium" />
+                <Entry Text="{Binding Recipe.Name}" FontSize="Small" />
+                <Label Text="Duration in minutes to make. (Number only)"/>
+                <Entry Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
+                <Label Text="Is it vegan?"/>
+                <Switch IsToggled="{Binding Recipe.isVegan}"/>
+                <Label Text="Is it vegetarian?"/>
+                <Switch IsToggled="{Binding Recipe.isVegetarian}"/>
+                <Label Text="A comma separated list of ingredients"/>
+                <Editor Text="{Binding Recipe.IngredientList}"/>
+                <Label Text="Steps on how to make it"/>
+                <Editor Text="{Binding Recipe.HowTo}" FontSize="Small" Margin="0"/>
+                <Label Text="Description" FontSize="Medium" />
+                <Editor Text="{Binding Recipe.Description}" FontSize="Small" Margin="0" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

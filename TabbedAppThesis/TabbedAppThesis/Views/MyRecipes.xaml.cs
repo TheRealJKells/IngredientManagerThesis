@@ -60,5 +60,15 @@ namespace TabbedAppThesis.Views
 
 
         }
+
+        private void Button_Clicked_Delete(object sender, EventArgs e)
+        {
+            DisplayAlert("alert", "You have clicked the delete button!", "got it");
+        }
+
+        private void Button_Clicked_Edit(object sender, EventArgs e)
+        {
+            DisplayAlert("alert", "You have clicked the edit button!", "got it");
+        }
     }
 }

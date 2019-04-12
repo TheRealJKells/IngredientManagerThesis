@@ -39,6 +39,13 @@ namespace TabbedAppThesis.Services
             
         }
 
+        public List<Guid> GetSessionRecipesCreated()
+        {
+            List<Guid> recipesCreated = new List<Guid>();
+
+            return recipesCreated;
+        }
+
         //Get All users
         public List<User> GetAllUsers()
         {
