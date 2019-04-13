@@ -38,7 +38,34 @@ namespace TabbedAppThesis.Views
 
         private async void Save_Clicked(object sender, EventArgs e)
         {
+            string eachIngredient = string.Empty;
+            List<string> tempIngredientList = new List<string>();
+            if (myIngredientList.Text != null)
+            {
+                foreach (char c in myIngredientList.Text)
+                {
+                    if (c == ',')
+                    {
+                        tempIngredientList.Add(eachIngredient);
+                        eachIngredient = string.Empty;
+                    }
+                    else if (c == ' ')
+                    {
+                        continue;
+                    }
+                    else
+                        eachIngredient = eachIngredient + c;
+                }
+                if (eachIngredient != string.Empty)
+                {
+                    tempIngredientList.Add(eachIngredient);
+                }
+            }
             Recipe recipe = viewModel.Recipe as Recipe;
+            if (myIngredientList.Text != null)
+            {
+                recipe.IngredientList = tempIngredientList;
+            }
             App.LiteDB.UpdateRecipe(recipe);
             await Navigation.PopAsync();
 

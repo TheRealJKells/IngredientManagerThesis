@@ -15,11 +15,12 @@
                 <Label Text="Duration in minutes to make. (Number only)"/>
                 <Entry Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
                 <Label Text="Is it vegan?"/>
-                <Switch IsToggled="{Binding Recipe.isVegan}"/>
+                <Switch IsToggled="{Binding Recipe.IsVegan}"/>
                 <Label Text="Is it vegetarian?"/>
-                <Switch IsToggled="{Binding Recipe.isVegetarian}"/>
+                <Switch IsToggled="{Binding Recipe.IsVegetarian}"/>
                 <Label Text="A comma separated list of ingredients"/>
-                <Editor Text="{Binding Recipe.IngredientList}"/>
+                <Editor Text="{Binding Recipe.IngredientList}"
+                        x:Name="anotherIngredientList"/>
                 <Label Text="Steps on how to make it"/>
                 <Editor Text="{Binding Recipe.HowTo}" FontSize="Small" Margin="0"/>
                 <Label Text="Description" FontSize="Medium" />

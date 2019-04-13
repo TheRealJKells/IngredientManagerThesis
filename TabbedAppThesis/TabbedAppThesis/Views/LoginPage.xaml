@@ -24,7 +24,8 @@
                         HorizontalOptions="Center"
                         BorderColor="DarkBlue"
                         BackgroundColor="SkyBlue"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                        CornerRadius="15"/>
                 <Label x:Name="messageLabel" 
                        TextColor="Red"
                        FontSize="Large"

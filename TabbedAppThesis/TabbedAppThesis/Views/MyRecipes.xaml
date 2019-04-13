@@ -69,7 +69,8 @@
                                         BorderColor="Black"
                                         WidthRequest="80"
                                         HorizontalOptions="End"
-                                        Clicked="Button_Clicked_Delete"/>
+                                        Clicked="Button_Clicked_Delete"
+                                        CornerRadius="15"/>
                                 <Button Text="Edit"
                                         Grid.Row="0"
                                         Grid.Column="3"
@@ -77,7 +78,8 @@
                                         BackgroundColor="SkyBlue"
                                         BorderColor="DarkBlue"
                                         WidthRequest="80"
-                                        HorizontalOptions="End"/>
+                                        HorizontalOptions="End"
+                                        CornerRadius="15"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

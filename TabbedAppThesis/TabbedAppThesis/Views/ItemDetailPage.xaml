@@ -13,12 +13,12 @@
             <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
             <Label Text="Time to make:" FontSize="Medium" />
             <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
-            <Label Text="Description:" FontSize="Medium"/>
-            <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
-            <Label Text="Description:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
-            <Label Text="Description:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
+            <Label Text="Ingredient List:" FontSize="Medium"/>
+            <Label Text="{Binding StringIngredientList}" FontSize="Small"/>
+            <Label Text="Is it Vegan?" FontSize="Medium" />
+            <Label Text="{Binding IsVegan}" FontSize="Small"/>
+            <Label Text="Is it Vegetarian?" FontSize="Medium" />
+            <Label Text="{Binding IsVegetarian}" FontSize="Small"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

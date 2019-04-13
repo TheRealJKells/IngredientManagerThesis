@@ -35,6 +35,31 @@ namespace TabbedAppThesis.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
+            string eachIngredient = string.Empty;
+            List<string> tempIngredientList = new List<string>();
+            if (anotherIngredientList.Text != null)
+            {
+                foreach (char c in anotherIngredientList.Text)
+                {
+                    if (c == ',')
+                    {
+                        tempIngredientList.Add(eachIngredient);
+                        eachIngredient = string.Empty;
+                    }
+                    else if (c == ' ')
+                    {
+                        continue;
+                    }
+                    else
+                        eachIngredient = eachIngredient + c;
+                }
+                if (eachIngredient != string.Empty)
+                {
+                    tempIngredientList.Add(eachIngredient);
+                }
+
+                Recipe.IngredientList = tempIngredientList;
+            }
             App.LiteDB.AddRecipe(Recipe);
             List<Recipe> recipes = new List<Recipe>(App.LiteDB.GetRecipesBySessionID());
             List<Guid> id = new List<Guid>();

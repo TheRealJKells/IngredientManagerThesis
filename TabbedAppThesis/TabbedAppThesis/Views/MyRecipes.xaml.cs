@@ -70,7 +70,7 @@ namespace TabbedAppThesis.Views
             var button = sender as Button;
             var recipe = button.BindingContext as Recipe;
 
-            vm.removeCommand.Execute(recipe);
+            vm.RemoveCommand.Execute(recipe);
           
             App.LiteDB.DeleteRecipe(recipe.ID);
 
@@ -83,8 +83,6 @@ namespace TabbedAppThesis.Views
                 }
             }
             App.LiteDB.UpdateUser(App.SessionUser);
-
-            DisplayAlert("alert", "You have clicked the delete button!", "got it");
             OnAppearing();
            
         }
@@ -94,7 +92,6 @@ namespace TabbedAppThesis.Views
             var vm = BindingContext as RecipesViewModel;
             var button = sender as Button;
             var recipe = button.BindingContext as Recipe;
-            await DisplayAlert("alert", "You have clicked the edit button!", "got it");
             await Navigation.PushAsync(new EditRecipePage(new RecipeDetailViewModel(recipe)));
             
         }

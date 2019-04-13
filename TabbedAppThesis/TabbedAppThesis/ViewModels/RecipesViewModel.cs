@@ -44,7 +44,7 @@ namespace TabbedAppThesis.ViewModels
             } 
         }
        
-        public Command<Recipe> removeCommand
+        public Command<Recipe> RemoveCommand
         {
             get
             {

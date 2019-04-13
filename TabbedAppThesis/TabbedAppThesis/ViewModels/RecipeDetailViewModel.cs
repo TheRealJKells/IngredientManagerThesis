@@ -14,15 +14,48 @@ namespace TabbedAppThesis.ViewModels
             Title = recipe?.Name;
             Recipe = recipe;
         }
-
-        public Command updateCommand
+        public string IsVegan
         {
             get
             {
-                return new Command(() =>
+                string mystring = string.Empty;
+                if (Recipe.IsVegan == true)
+                    mystring = "Yes";
+                else
+                    mystring = "No";
+                return mystring;
+            }
+        }
+        public string IsVegetarian
+        {
+            get
+            {
+                string mystring = string.Empty;
+                if (Recipe.IsVegetarian == true)
+                    mystring = "Yes";
+                else
+                    mystring = "No";
+
+                return mystring;
+            }
+        }
+        public string StringIngredientList
+        {
+           
+            get
+            {
+                int count = 1;
+                string mystring = string.Empty;
+                foreach (string s in Recipe.IngredientList)
                 {
-                    App.LiteDB.UpdateRecipe(Recipe);
-                });
+                    mystring = mystring + s;
+                    if (count != Recipe.IngredientList.Count)
+                    {
+                        mystring = mystring + ", ";
+                    }
+                    count++;
+                }
+                return mystring;
             }
         }
     }

@@ -18,13 +18,19 @@
                 <Switch IsToggled="{Binding Recipe.IsVegetarian}"
                         />
                 <Label Text="A comma separated list of ingredients"/>
-                <Editor Text="{Binding Recipe.IngredientList}"/>
+                <Editor Text="{Binding StringIngredientList}"
+                        x:Name="myIngredientList"/>
                 <Label Text="Steps on how to make it"/>
                 <Editor Text="{Binding Recipe.HowTo}" FontSize="Small" Margin="0"/>
                 <Label Text="Description" FontSize="Medium" />
                 <Editor Text="{Binding Recipe.Description}" FontSize="Small" Margin="0" />
                 <Button Text="Save"
-                        Clicked="Save_Clicked"/>
+                        Clicked="Save_Clicked"
+                        HorizontalOptions="Center"
+                        BorderColor="DarkBlue"
+                        BackgroundColor="SkyBlue"
+                        TextColor="Black"
+                        CornerRadius="15"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

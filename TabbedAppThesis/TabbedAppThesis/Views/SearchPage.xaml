@@ -31,14 +31,16 @@
                     Clicked="Button_Clicked_1"
                     BorderColor="DarkBlue"
                     BackgroundColor="SkyBlue"
-                        TextColor="Black"/>
+                    TextColor="Black"
+                        CornerRadius="15"/>
                 <Button Grid.Row="0" Grid.Column="1"
                     Text="remove new ingredient box"
                     FontSize="10"
                     Clicked="Button_Clicked_2"
                         BorderColor="DarkBlue"
                         BackgroundColor="SkyBlue"
-                        TextColor="Black"/>
+                        TextColor="Black"
+                        CornerRadius="15"/>
             </Grid>
             <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="ingredientList">
