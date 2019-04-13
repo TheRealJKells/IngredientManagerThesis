@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using TabbedAppThesis.Models;
+using Xamarin.Forms;
 
 namespace TabbedAppThesis.ViewModels
 {
@@ -12,6 +13,17 @@ namespace TabbedAppThesis.ViewModels
         {
             Title = recipe?.Name;
             Recipe = recipe;
+        }
+
+        public Command updateCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    App.LiteDB.UpdateRecipe(Recipe);
+                });
+            }
         }
     }
 }

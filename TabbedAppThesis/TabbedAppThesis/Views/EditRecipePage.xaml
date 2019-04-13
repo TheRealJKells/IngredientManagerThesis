@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TabbedAppThesis.Views.EditRecipePage">
-    Title="New Item">
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Back     " Clicked="GoBack_Clicked"/>
-        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
-    </ContentPage.ToolbarItems>-->
+             x:Class="TabbedAppThesis.Views.EditRecipePage"
+             Title="{Binding Title}">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="15">
@@ -15,15 +11,20 @@
                 <Label Text="Duration in minutes to make. (Number only)"/>
                 <Entry Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
                 <Label Text="Is it vegan?"/>
-                <Switch IsToggled="{Binding Recipe.isVegan}"/>
+                <Switch IsToggled="{Binding Recipe.IsVegan}"
+                       
+                        />
                 <Label Text="Is it vegetarian?"/>
-                <Switch IsToggled="{Binding Recipe.isVegetarian}"/>
+                <Switch IsToggled="{Binding Recipe.IsVegetarian}"
+                        />
                 <Label Text="A comma separated list of ingredients"/>
                 <Editor Text="{Binding Recipe.IngredientList}"/>
                 <Label Text="Steps on how to make it"/>
                 <Editor Text="{Binding Recipe.HowTo}" FontSize="Small" Margin="0"/>
                 <Label Text="Description" FontSize="Medium" />
                 <Editor Text="{Binding Recipe.Description}" FontSize="Small" Margin="0" />
+                <Button Text="Save"
+                        Clicked="Save_Clicked"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

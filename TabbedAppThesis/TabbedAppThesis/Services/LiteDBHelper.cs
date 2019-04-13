@@ -198,6 +198,11 @@ namespace TabbedAppThesis.Services
         {
             recipeCollection.Delete(a => a.ID == ID);
         }
+
+        public void UpdateRecipe(Recipe recipe)
+        {
+            recipeCollection.Update(recipe);
+        }
     }
 }
     

@@ -89,9 +89,14 @@ namespace TabbedAppThesis.Views
            
         }
 
-        private void Button_Clicked_Edit(object sender, EventArgs e)
+        private async void Button_Clicked_Edit(object sender, EventArgs e)
         {
-            DisplayAlert("alert", "You have clicked the edit button!", "got it");
+            var vm = BindingContext as RecipesViewModel;
+            var button = sender as Button;
+            var recipe = button.BindingContext as Recipe;
+            await DisplayAlert("alert", "You have clicked the edit button!", "got it");
+            await Navigation.PushAsync(new EditRecipePage(new RecipeDetailViewModel(recipe)));
+            
         }
     }
 }
