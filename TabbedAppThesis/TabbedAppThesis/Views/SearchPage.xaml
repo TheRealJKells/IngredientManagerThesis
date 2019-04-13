@@ -52,7 +52,10 @@
                    HorizontalOptions="Center"
                    FontSize="Large"/>
             <Button Text="Search" FontAttributes="Bold" Clicked="Button_Clicked"
-                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    CornerRadius="15"
+                    BorderColor="DarkBlue"
+                    BackgroundColor="SkyBlue"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
