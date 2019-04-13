@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-12T05:47:49.703</Modified>
+      <Modified>2019-04-13T05:29:22.569</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\TabbedAppThesis.UWP.exe">
       <PackagePath>entrypoint\TabbedAppThesis.UWP.exe</PackagePath>
-      <Modified>2019-04-12T05:47:48.860</Modified>
+      <Modified>2019-04-13T05:29:21.793</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\.nuget\packages\litedb\4.1.4\lib\netstandard2.0\LiteDB.dll">
       <PackagePath>LiteDB.dll</PackagePath>
@@ -716,7 +716,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\bin\Debug\netstandard2.0\TabbedAppThesis.dll">
       <PackagePath>TabbedAppThesis.dll</PackagePath>
-      <Modified>2019-04-12T05:47:42.354</Modified>
+      <Modified>2019-04-13T05:29:16.430</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -871,11 +871,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-12T05:47:48.641</Modified>
+      <Modified>2019-04-13T05:29:21.611</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-12T05:47:48.641</Modified>
+      <Modified>2019-04-13T05:29:21.612</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -891,7 +891,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.UWP\bin\x86\Debug\Core\TabbedAppThesis.UWP.exe">
       <PackagePath>TabbedAppThesis.UWP.exe</PackagePath>
-      <Modified>2019-04-12T05:47:49.696</Modified>
+      <Modified>2019-04-13T05:29:22.563</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

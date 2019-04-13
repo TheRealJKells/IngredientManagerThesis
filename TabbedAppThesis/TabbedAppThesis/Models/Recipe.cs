@@ -19,5 +19,7 @@ namespace TabbedAppThesis.Models
 
 
         public List<string> IngredientList { get; set; }
+
+       
     }
 }

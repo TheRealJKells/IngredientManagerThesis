@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TabbedAppThesis.ViewModels"
              x:Class="TabbedAppThesis.Views.MyRecipes"
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
@@ -13,6 +14,9 @@
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <viewModels:RecipesViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="ItemsListView" 
@@ -40,7 +44,7 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-                              
+
                                 <Label Text="{Binding Name}"
                                        Grid.Row="0"
                                        Grid.Column="0"
@@ -61,11 +65,11 @@
                                 <Button Text="Delete"
                                         Grid.Row="0"
                                         Grid.Column="4"
-                                        Clicked="Button_Clicked_Delete"
                                         BackgroundColor="Red"
                                         BorderColor="Black"
                                         WidthRequest="80"
-                                        HorizontalOptions="End"/>
+                                        HorizontalOptions="End"
+                                        Clicked="Button_Clicked_Delete"/>
                                 <Button Text="Edit"
                                         Grid.Row="0"
                                         Grid.Column="3"
@@ -73,7 +77,6 @@
                                         BackgroundColor="SkyBlue"
                                         BorderColor="DarkBlue"
                                         WidthRequest="80"
-                                        
                                         HorizontalOptions="End"/>
                             </Grid>
                         </ViewCell>

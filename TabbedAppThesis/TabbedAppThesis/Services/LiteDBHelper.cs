@@ -20,6 +20,8 @@ namespace TabbedAppThesis.Services
             
             userCollection = db.GetCollection<User>("Users");
             recipeCollection = db.GetCollection<Recipe>("Recipes");
+            //db.DropCollection("Users");
+            //db.DropCollection("Recipes");
             List<User> users = new List<User>();
             List<Recipe> recipes = new List<Recipe>();
             users = GetAllUsers();
@@ -41,7 +43,7 @@ namespace TabbedAppThesis.Services
 
         public List<Guid> GetSessionRecipesCreated()
         {
-            List<Guid> recipesCreated = new List<Guid>();
+            List<Guid> recipesCreated = new List<Guid>(App.SessionUser.RecipesCreated);
 
             return recipesCreated;
         }

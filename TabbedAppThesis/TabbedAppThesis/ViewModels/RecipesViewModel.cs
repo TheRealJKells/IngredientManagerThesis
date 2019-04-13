@@ -40,9 +40,20 @@ namespace TabbedAppThesis.ViewModels
                     user.RecipesCreated.Add(r.ID);
                 }
                 App.LiteDB.UpdateUser(user);
+
             } 
         }
        
+        public Command<Recipe> removeCommand
+        {
+            get
+            {
+                return new Command<Recipe>((recipe) =>
+                {
+                    Recipes.Remove(recipe);
+                }); 
+            }
+        }
         public void ExecuteLoadRecipesUser()
         {
             List<Recipe> recipes = new List<Recipe>();

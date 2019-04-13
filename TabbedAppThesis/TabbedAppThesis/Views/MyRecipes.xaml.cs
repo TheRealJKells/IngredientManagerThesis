@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using TabbedAppThesis.Models;
 using TabbedAppThesis.Views;
 using TabbedAppThesis.ViewModels;
+using LoginNavigation;
 
 namespace TabbedAppThesis.Views
 {
@@ -47,7 +48,9 @@ namespace TabbedAppThesis.Views
 
         protected override void OnAppearing()
         {
+       
 
+           
             viewModel2.Recipes.Clear();
             viewModel2.ExecuteLoadRecipesUser();
 
@@ -63,7 +66,27 @@ namespace TabbedAppThesis.Views
 
         private void Button_Clicked_Delete(object sender, EventArgs e)
         {
+            var vm = BindingContext as RecipesViewModel;
+            var button = sender as Button;
+            var recipe = button.BindingContext as Recipe;
+
+            vm.removeCommand.Execute(recipe);
+          
+            App.LiteDB.DeleteRecipe(recipe.ID);
+
+            for (int i = 0; i < App.SessionUser.RecipesCreated.Count; i++)
+            {
+                if (App.SessionUser.RecipesCreated.ElementAt(i) == recipe.ID)
+                {
+                    App.SessionUser.RecipesCreated.RemoveAt(i);
+                    break;
+                }
+            }
+            App.LiteDB.UpdateUser(App.SessionUser);
+
             DisplayAlert("alert", "You have clicked the delete button!", "got it");
+            OnAppearing();
+           
         }
 
         private void Button_Clicked_Edit(object sender, EventArgs e)
