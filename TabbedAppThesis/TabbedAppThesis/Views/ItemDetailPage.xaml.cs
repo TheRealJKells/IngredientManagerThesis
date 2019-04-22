@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 
 using TabbedAppThesis.Models;
 using TabbedAppThesis.ViewModels;
+using System.Collections.Generic;
 
 namespace TabbedAppThesis.Views
 {
@@ -32,6 +33,23 @@ namespace TabbedAppThesis.Views
 
             viewModel = new RecipeDetailViewModel(recipe);
             BindingContext = viewModel;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            List<Guid> recipes = new List<Guid>();
+
+            foreach(Guid i in App.SessionUser.RecipesUsed)
+            {
+                recipes.Add(i);
+            }
+            recipes.Add(viewModel.Recipe.ID);
+            App.SessionUser.RecipesUsed = recipes;
+            App.LiteDB.UpdateUser(App.SessionUser);
+            NotInCollectionButton.IsVisible = false;
+            NotInCollectionLabel.IsVisible = false;
+            InCollectionLabal.IsVisible = true;
+
         }
     }
 }

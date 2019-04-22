@@ -28,6 +28,13 @@ namespace TabbedAppThesis.ViewModels
             set { SetProperty(ref title, value); }
         }
 
+        string titletwo = string.Empty;
+        public string TitleTwo
+        {
+            get { return titletwo; }
+            set { SetProperty(ref titletwo, value); }
+        }
+
         protected bool SetProperty<T>(ref T backingStore, T value,
             [CallerMemberName]string propertyName = "",
             Action onChanged = null)

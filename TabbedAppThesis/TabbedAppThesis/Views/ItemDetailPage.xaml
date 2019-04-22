@@ -3,22 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabbedAppThesis.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <ScrollView>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Name:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.Name}" FontSize="Small"/>
-            <Label Text="Description:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
-            <Label Text="How to make:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
-            <Label Text="Time to make:" FontSize="Medium" />
-            <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
-            <Label Text="Ingredient List:" FontSize="Medium"/>
-            <Label Text="{Binding StringIngredientList}" FontSize="Small"/>
-            <Label Text="Is it Vegan?" FontSize="Medium" />
-            <Label Text="{Binding IsVegan}" FontSize="Small"/>
-            <Label Text="Is it Vegetarian?" FontSize="Medium" />
-            <Label Text="{Binding IsVegetarian}" FontSize="Small"/>
-        </StackLayout>
-    </ScrollView>
+    <StackLayout>    
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Name:" FontSize="Medium" />
+                <Label Text="{Binding Recipe.Name}" FontSize="Small"/>
+                <Label Text="Description:" FontSize="Medium" />
+                <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
+                <Label Text="How to make:" FontSize="Medium" />
+                <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
+                <Label Text="Time to make:" FontSize="Medium" />
+                <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
+                <Label Text="Ingredient List:" FontSize="Medium"/>
+                <Label Text="{Binding StringIngredientList}" FontSize="Small"/>
+                <Label Text="Is it Vegan?" FontSize="Medium" />
+                <Label Text="{Binding IsVegan}" FontSize="Small"/>
+                <Label Text="Is it Vegetarian?" FontSize="Medium" />
+                <Label Text="{Binding IsVegetarian}" FontSize="Small"/>
+            </StackLayout>
+        </ScrollView>
+        <Label
+            x:Name="InCollectionLabal"
+            MinimumHeightRequest="30"
+            Text="This recipe is in your collection"
+            TextColor="Green"
+            BackgroundColor="LightGreen"
+            IsVisible="{Binding IsInCollection}"
+            />
+        <Grid MinimumHeightRequest="30">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        <Label
+            x:Name="NotInCollectionLabel"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            IsVisible="{Binding AddToCollection}"
+            Text="Add this recipe to your collection?"
+            FontSize="Small"
+            />
+        <Button
+            x:Name="NotInCollectionButton"
+            Grid.Column="2"
+            IsVisible="{Binding AddToCollection}"
+            Text="Yes"
+            Clicked="Button_Clicked"
+            BorderColor="DarkBlue"
+            BackgroundColor="SkyBlue"
+            CornerRadius="15"
+            />
+        </Grid>
+    </StackLayout>
+
 </ContentPage>

@@ -79,6 +79,17 @@ namespace TabbedAppThesis.Services
             return recipes;
         }
 
+        public List<Recipe> GetRecipesBySessionCollection()
+        {
+            List<Recipe> recipes = new List<Recipe>();
+            foreach (Guid i in App.SessionUser.RecipesUsed)
+            {
+                recipes.Add(GetRecipesByRecipeID(i));
+            }
+
+            return recipes;
+        }
+
         //Get user by username and password
         public User GetUser(User loginUser)
         {
@@ -154,6 +165,7 @@ namespace TabbedAppThesis.Services
         //*******************************************
         public IEnumerable<Recipe> GetRecipesByIngredientName(List<string> names)
         {
+
             IEnumerable<Recipe> recipes = recipeCollection.Find(i => i.IngredientList.Contains(names.First()));
             
             int counter = 1;
@@ -161,6 +173,7 @@ namespace TabbedAppThesis.Services
             while(counter != names.Count)
             {
                 newList = new List<Recipe>();
+ 
                 foreach (Recipe r in recipes)
                 {
                     if (r.IngredientList.Contains(names.ElementAt(counter)))
@@ -177,7 +190,18 @@ namespace TabbedAppThesis.Services
         public Recipe GetRecipesByRecipeID(Guid ID)
         {
             recipeCollection.EnsureIndex(i => i.ID);
-            var recipe = recipeCollection.Find(i => i.ID.Equals(ID)).First();
+
+            Recipe recipe = new Recipe();
+
+            try
+            {
+                recipe = recipeCollection.Find(i => i.ID.Equals(ID)).First();
+            }
+            catch
+            {
+                recipe = null;
+            }
+            
 
             return recipe;
         }

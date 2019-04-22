@@ -72,6 +72,7 @@ namespace TabbedAppThesis.Views
         {
 
             List<String> cIngredientList = new List<String>();
+            noIngredients.IsVisible = false;
 
 
             foreach (Entry en in ingredientList.Children)
@@ -83,8 +84,16 @@ namespace TabbedAppThesis.Views
             }
             //DisplayAlert("Success", "Successully stored ingredients!", "Cool");
 
+            if (cIngredientList.Count() == 0)
+            {
+                noIngredients.IsVisible = true;
+            }
+            else
+            {
+                await Navigation.PushAsync(new ResultsPage(cIngredientList));
+            }
 
-            await Navigation.PushAsync(new ResultsPage(cIngredientList));
+            
         }
     }
 }

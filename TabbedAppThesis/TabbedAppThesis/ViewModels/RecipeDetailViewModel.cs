@@ -14,6 +14,36 @@ namespace TabbedAppThesis.ViewModels
             Title = recipe?.Name;
             Recipe = recipe;
         }
+
+        public bool IsInCollection
+        {
+           
+            get
+            {
+                bool retVal = false;
+                if (App.SessionUser.RecipesUsed.Contains(Recipe.ID))
+                {
+                    retVal = true;
+                }
+
+                return retVal;
+            }
+        }
+
+        public bool AddToCollection
+        {
+            get
+            {
+                bool retVal = false;
+                if (!App.SessionUser.RecipesUsed.Contains(Recipe.ID))
+                {
+                    retVal = true;
+                }
+
+                return retVal;
+            }
+        }
+
         public string IsVegan
         {
             get

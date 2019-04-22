@@ -48,6 +48,12 @@
                    Placeholder="Enter in an ingredient" />
                 </StackLayout>
             </ScrollView>
+            <Label x:Name="noIngredients" 
+                   Text="No ingredients were entered.  Please enter in an ingredient before searching."
+                   TextColor="Red"
+                   HorizontalOptions="Center"
+                   FontSize="Small"
+                   IsVisible="False"/>
             <Label Text="{Binding WelcomeText}"
                    HorizontalOptions="Center"
                    FontSize="Large"/>

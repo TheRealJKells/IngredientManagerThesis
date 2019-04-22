@@ -19,9 +19,16 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ItemsListView" 
-                ItemsSource="{Binding Recipes}"
-                VerticalOptions="FillAndExpand"
+            <Label Text="You have no created recipes to display"
+                   x:Name="noRecipes"
+                   IsVisible="False"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="FillAndExpand"/>
+            <ListView x:Name="ItemsListView"
+                 SeparatorColor="Black"
+                 ItemsSource="{Binding Recipes}"
+                 VerticalOptions="FillAndExpand"
                  HasUnevenRows="true"
                  ItemSelected="OnItemSelected">
                  <!--RefreshCommand="{Binding LoadItemsCommand}"
@@ -32,7 +39,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                       
+
                             <Grid Padding="10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>

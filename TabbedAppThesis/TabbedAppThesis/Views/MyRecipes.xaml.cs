@@ -17,15 +17,15 @@ namespace TabbedAppThesis.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyRecipes : ContentPage
     {
-        //ItemsViewModel viewModel;
         RecipesViewModel viewModel2;
 
         public MyRecipes()
         {
             InitializeComponent();
 
-            //BindingContext = viewModel = new ItemsViewModel();
             BindingContext = viewModel2 = new RecipesViewModel();
+           
+            
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -48,20 +48,11 @@ namespace TabbedAppThesis.Views
 
         protected override void OnAppearing()
         {
-       
 
-           
             viewModel2.Recipes.Clear();
             viewModel2.ExecuteLoadRecipesUser();
-
-
-
-            //if (viewModel.Items.Count == 0)
-            //    viewModel.LoadItemsCommand.Execute(null);
-
+            noRecipes.IsVisible = viewModel2.Recipes.Count == 0 ? true : false;
             base.OnAppearing();
-
-
         }
 
         private void Button_Clicked_Delete(object sender, EventArgs e)

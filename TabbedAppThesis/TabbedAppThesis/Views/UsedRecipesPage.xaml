@@ -1,12 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TabbedAppThesis.ViewModels"
+             Title="{Binding TitleTwo}"
              x:Class="TabbedAppThesis.Views.UsedRecipesPage">
+    <ContentPage.BindingContext>
+        <viewModels:RecipesViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="You have no recipes in your collection"
+                   x:Name="noRecipes"
+                   IsVisible="False"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="FillAndExpand"/>
+            <ListView x:Name="ItemsListView" 
+                ItemsSource="{Binding Recipes}"
+                VerticalOptions="FillAndExpand"
+                 HasUnevenRows="true"
+                 ItemSelected="OnItemSelected">
+                <!--RefreshCommand="{Binding LoadItemsCommand}"
+                 IsPullToRefreshEnabled="true"
+                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                 CachingStrategy="RecycleElement"-->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Name}"
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       LineBreakMode="NoWrap" 
+                                       FontSize="16" 
+                                       HorizontalOptions="Start"
+                                       FontAttributes="Bold"
+                                       Style="{DynamicResource ListItemTextStyle}"/>
+
+                                <Label Text="{Binding Description}" 
+                                       Grid.Row="0"
+                                       Grid.Column="0"
+                                       Margin="0,30,0,0"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="13"
+                                       HorizontalOptions="Start"
+                                       Style="{DynamicResource ListItemDetailTextStyle}"/>
+
+                                <Button Text="Delete"
+                                        BackgroundColor="Red"
+                                        BorderColor="Black"
+                                        WidthRequest="80"
+                                        Grid.Row="0"
+                                        Grid.Column="4"
+                                        HorizontalOptions="End"
+                                        Clicked="Button_Clicked_Delete"
+                                        CornerRadius="15"
+                                        />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

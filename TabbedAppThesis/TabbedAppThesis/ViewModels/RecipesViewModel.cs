@@ -8,16 +8,38 @@ using TabbedAppThesis.Services;
 using LoginNavigation;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using System.Linq;
+using System.Collections;
 
 namespace TabbedAppThesis.ViewModels
 {
     public class RecipesViewModel : BaseViewModel
     {
         public ObservableCollection<Recipe> Recipes { get; set; }
+        public Color SwitchColor { get; set; }
+       
+        public Color Color
+        {
+            get
+            {
+                if (SwitchColor == Color.LightGray)
+                {
+                    SwitchColor = Color.White;
+                }
+                else
+                { 
+                    SwitchColor = Color.LightGray;
+                }
+                
+                return SwitchColor;
+            }
+        }
+
 
         public RecipesViewModel()
         {
             Title = App.SessionUser.Username + "'s Recipes";
+            TitleTwo = App.SessionUser.Username + "'s Collection";
             Recipes = new ObservableCollection<Recipe>();
            
             if (App.LiteDB.GetAllRecipes().Count == 0)
@@ -71,6 +93,34 @@ namespace TabbedAppThesis.ViewModels
             foreach (Recipe r in recipes)
             {
                 Recipes.Add(r);
+            }
+        }
+
+        public void ExecuteLoadRecipesCollection()
+        {
+            List<Guid> gui = new List<Guid>();
+
+            IEnumerable<Recipe> recipes = new List<Recipe>();
+
+            gui = App.SessionUser.RecipesUsed;
+
+            List<Guid> guiTemp = new List<Guid>(gui);
+
+            foreach (Guid i in guiTemp)
+            {
+                if (App.LiteDB.GetRecipesByRecipeID(i) == null)
+                {
+                    gui.Remove(i);
+                }
+            }
+            App.SessionUser.RecipesUsed = gui;
+            App.LiteDB.UpdateUser(App.SessionUser);
+
+            recipes = App.LiteDB.GetRecipesBySessionCollection();
+            for(int i = 0; i < recipes.Count(); i++)
+            {
+                    Recipes.Add(recipes.ElementAt(i));
+               
             }
         }
     }
