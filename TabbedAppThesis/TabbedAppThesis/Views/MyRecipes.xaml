@@ -40,10 +40,12 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Grid Padding="10">
+                            <StackLayout BackgroundColor="{Binding MainColor}"
+                                         x:Name="myLayout">
+                            <Grid Padding="5">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
@@ -51,8 +53,8 @@
                                     <ColumnDefinition/>
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
-
-                                <Label Text="{Binding Name}"
+                                    <Label Text="{Binding Name}"
+                                       TextColor="Black"
                                        Grid.Row="0"
                                        Grid.Column="0"
                                        LineBreakMode="NoWrap" 
@@ -60,25 +62,31 @@
                                        HorizontalOptions="Start"
                                        FontAttributes="Bold"
                                        Style="{DynamicResource ListItemTextStyle}"/>
-
-                                <Label Text="{Binding Description}" 
-                                       Grid.Row="0"
-                                       Grid.Column="0"
-                                       Margin="0,30,0,0"
-                                       LineBreakMode="NoWrap"
-                                       FontSize="13"
-                                       HorizontalOptions="Start"
-                                       Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Button Text="Delete"
+                                    <Label Text="{Binding TimeToMake}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Margin="0, 25, 0, 0"
+                                           LineBreakMode="NoWrap"
+                                           FontSize="13"
+                                           HorizontalOptions="Start"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                    <Label Text=" minutes to make"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="1"
+                                           Margin="0, 22, 0, 0"
+                                           HorizontalTextAlignment="Center"
+                                       />
+                                    <Button Text="Delete"
                                         Grid.Row="0"
                                         Grid.Column="4"
-                                        BackgroundColor="Red"
+                                        BackgroundColor="PaleVioletRed"
                                         BorderColor="Black"
                                         WidthRequest="80"
                                         HorizontalOptions="End"
                                         Clicked="Button_Clicked_Delete"
                                         CornerRadius="15"/>
-                                <Button Text="Edit"
+                                    <Button Text="Edit"
                                         Grid.Row="0"
                                         Grid.Column="3"
                                         Clicked="Button_Clicked_Edit"
@@ -87,7 +95,8 @@
                                         WidthRequest="80"
                                         HorizontalOptions="End"
                                         CornerRadius="15"/>
-                            </Grid>
+                                </Grid>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

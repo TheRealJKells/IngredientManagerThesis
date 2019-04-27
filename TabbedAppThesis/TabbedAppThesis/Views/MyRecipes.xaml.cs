@@ -24,7 +24,6 @@ namespace TabbedAppThesis.Views
             InitializeComponent();
 
             BindingContext = viewModel2 = new RecipesViewModel();
-           
             
         }
 
@@ -48,7 +47,6 @@ namespace TabbedAppThesis.Views
 
         protected override void OnAppearing()
         {
-
             viewModel2.Recipes.Clear();
             viewModel2.ExecuteLoadRecipesUser();
             noRecipes.IsVisible = viewModel2.Recipes.Count == 0 ? true : false;

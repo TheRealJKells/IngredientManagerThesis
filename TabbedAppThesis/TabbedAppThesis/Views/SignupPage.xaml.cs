@@ -37,18 +37,20 @@ namespace TabbedAppThesis.Views
             if (signUpSucceeded)
             {
                 App.LiteDB.Adduser(user);
+                MessageLabel.Text = string.Empty;
                 await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
+
             }
             else if (isUserTaken)
             {
-                messageLabel.Text = "That username is already taken";
+                MessageLabel.Text = "That username is already taken";
             }
             else if (isEmailTaken)
             {
-                messageLabel.Text = "That email is already being used";
+                MessageLabel.Text = "That email is already being used";
             }
             else
-                messageLabel.Text = "Login failed";
+                MessageLabel.Text = "Login failed";
         }
 
         bool AreDetailsValid(User user)
@@ -62,14 +64,14 @@ namespace TabbedAppThesis.Views
 
             if (!App.LiteDB.GetUserByUsername(user.Username))
             {
-                isEmailTaken = true;
+                isUserTaken = true;
             }
             return (!string.IsNullOrWhiteSpace(user.Username) 
                 && !string.IsNullOrWhiteSpace(user.Password) 
                 && !string.IsNullOrWhiteSpace(user.Email) 
                 && user.Email.Contains("@"))
                 && !isUserTaken
-                &&!isEmailTaken;
+                && !isEmailTaken;
         }
     }
 }

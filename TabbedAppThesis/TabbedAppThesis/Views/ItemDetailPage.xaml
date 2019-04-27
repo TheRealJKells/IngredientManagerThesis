@@ -6,26 +6,26 @@
     <StackLayout>    
         <ScrollView>
             <StackLayout Spacing="20" Padding="15">
-                <Label Text="Name:" FontSize="Medium" />
+                <Label Text="Name:" FontSize="Medium" TextColor="black"/>
                 <Label Text="{Binding Recipe.Name}" FontSize="Small"/>
-                <Label Text="Description:" FontSize="Medium" />
-                <Label Text="{Binding Recipe.Description}" FontSize="Small"/>
-                <Label Text="How to make:" FontSize="Medium" />
+                <Label Text="Description:" FontSize="Medium" TextColor="black"/>
+                <Label Text="{Binding Recipe.Description}" FontSize="Small" />
+                <Label Text="How to make:" FontSize="Medium" TextColor="black" />
                 <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
-                <Label Text="Time to make:" FontSize="Medium" />
+                <Label Text="Time to make:" FontSize="Medium" TextColor="black" />
                 <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
-                <Label Text="Ingredient List:" FontSize="Medium"/>
+                <Label Text="Ingredient List:" FontSize="Medium" TextColor="black"/>
                 <Label Text="{Binding StringIngredientList}" FontSize="Small"/>
-                <Label Text="Is it Vegan?" FontSize="Medium" />
+                <Label Text="Is it Vegan?" FontSize="Medium"  TextColor="black"/>
                 <Label Text="{Binding IsVegan}" FontSize="Small"/>
-                <Label Text="Is it Vegetarian?" FontSize="Medium" />
+                <Label Text="Is it Vegetarian?" FontSize="Medium"  TextColor="black"/>
                 <Label Text="{Binding IsVegetarian}" FontSize="Small"/>
             </StackLayout>
         </ScrollView>
         <Label
             x:Name="InCollectionLabal"
             MinimumHeightRequest="30"
-            Text="This recipe is in your collection"
+            Text="This recipe is in your saved recipes"
             TextColor="Green"
             BackgroundColor="LightGreen"
             IsVisible="{Binding IsInCollection}"
@@ -44,7 +44,7 @@
             Grid.Column="0"
             Grid.ColumnSpan="2"
             IsVisible="{Binding AddToCollection}"
-            Text="Add this recipe to your collection?"
+            Text="Add this recipe to your saved recipes?"
             FontSize="Small"
             />
         <Button

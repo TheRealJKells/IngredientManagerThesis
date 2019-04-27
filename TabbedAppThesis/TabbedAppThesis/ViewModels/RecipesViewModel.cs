@@ -17,29 +17,17 @@ namespace TabbedAppThesis.ViewModels
     {
         public ObservableCollection<Recipe> Recipes { get; set; }
         public Color SwitchColor { get; set; }
+        public Color MainColor { get; set; }
+        public Color Color { get; set; }
        
-        public Color Color
-        {
-            get
-            {
-                if (SwitchColor == Color.LightGray)
-                {
-                    SwitchColor = Color.White;
-                }
-                else
-                { 
-                    SwitchColor = Color.LightGray;
-                }
-                
-                return SwitchColor;
-            }
-        }
 
 
         public RecipesViewModel()
         {
+            SwitchColor = Color.LightGray;
+            Color = Color.White;
             Title = App.SessionUser.Username + "'s Recipes";
-            TitleTwo = App.SessionUser.Username + "'s Collection";
+            TitleTwo = App.SessionUser.Username + "'s Saved Recipes";
             Recipes = new ObservableCollection<Recipe>();
            
             if (App.LiteDB.GetAllRecipes().Count == 0)

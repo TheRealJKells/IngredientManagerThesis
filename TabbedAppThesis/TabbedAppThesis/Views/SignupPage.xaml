@@ -15,7 +15,8 @@
                     HorizontalOptions="Center"
                     BackgroundColor="SkyBlue"
                     TextColor="Black"/>
-            <Label x:Name="messageLabel" />
+            <Label x:Name="MessageLabel" />
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

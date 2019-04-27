@@ -7,6 +7,12 @@
     
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="There are no results to be displayed.  Try searching for fewer ingredients."
+                   x:Name="noRecipes"
+                   IsVisible="False"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   VerticalOptions="FillAndExpand"/>
             <ListView x:Name="ItemsListView" 
                 ItemsSource="{Binding Recipes}"
                 VerticalOptions="FillAndExpand"
@@ -21,15 +27,40 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="10">
-                                <Label Text="{Binding Name}" 
-                                   LineBreakMode="NoWrap" 
-                                   FontSize="16" 
-                                   Style="{DynamicResource ListItemTextStyle}"/>
+                                <Grid Padding="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           LineBreakMode="NoWrap" 
+                                           FontSize="16" 
+                                           Style="{DynamicResource ListItemTextStyle}"/>
 
-                                <Label Text="{Binding Description}" 
-                                   LineBreakMode="NoWrap"
-                                   FontSize="13"
-                                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                <Label Text="{Binding TimeToMake}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Margin="0, 25, 0, 0"
+                                           LineBreakMode="NoWrap"
+                                           FontSize="13"
+                                           HorizontalOptions="Start"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                <Label Text=" minutes to make"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="1"
+                                           Margin="0, 22, 0, 0"
+                                           HorizontalTextAlignment="Center"
+                                       />
+                                </Grid>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

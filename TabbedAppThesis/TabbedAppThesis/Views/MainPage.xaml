@@ -27,7 +27,7 @@
                 <views:MyRecipes/>
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="Used Recipes">
+        <NavigationPage Title="My Saved Recipes">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_about.png"/>

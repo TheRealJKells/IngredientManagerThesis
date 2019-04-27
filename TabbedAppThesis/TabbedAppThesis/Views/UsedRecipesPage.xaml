@@ -50,17 +50,24 @@
                                        FontAttributes="Bold"
                                        Style="{DynamicResource ListItemTextStyle}"/>
 
-                                <Label Text="{Binding Description}" 
-                                       Grid.Row="0"
-                                       Grid.Column="0"
-                                       Margin="0,30,0,0"
-                                       LineBreakMode="NoWrap"
-                                       FontSize="13"
-                                       HorizontalOptions="Start"
-                                       Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                <Label Text="{Binding TimeToMake}"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Margin="0, 25, 0, 0"
+                                           LineBreakMode="NoWrap"
+                                           FontSize="13"
+                                           HorizontalOptions="Start"
+                                           Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                <Label Text=" minutes to make"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="1"
+                                           Margin="0, 22, 0, 0"
+                                           HorizontalTextAlignment="Center"
+                                       />
 
                                 <Button Text="Delete"
-                                        BackgroundColor="Red"
+                                        BackgroundColor="PaleVioletRed"
                                         BorderColor="Black"
                                         WidthRequest="80"
                                         Grid.Row="0"

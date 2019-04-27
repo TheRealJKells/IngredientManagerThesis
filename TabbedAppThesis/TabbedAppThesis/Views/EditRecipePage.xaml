@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabbedAppThesis.Views.EditRecipePage"
              Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="20" Padding="15">
@@ -12,7 +15,6 @@
                 <Entry Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
                 <Label Text="Is it vegan?"/>
                 <Switch IsToggled="{Binding Recipe.IsVegan}"
-                       
                         />
                 <Label Text="Is it vegetarian?"/>
                 <Switch IsToggled="{Binding Recipe.IsVegetarian}"
@@ -24,13 +26,6 @@
                 <Editor Text="{Binding Recipe.HowTo}" FontSize="Small" Margin="0"/>
                 <Label Text="Description" FontSize="Medium" />
                 <Editor Text="{Binding Recipe.Description}" FontSize="Small" Margin="0" />
-                <Button Text="Save"
-                        Clicked="Save_Clicked"
-                        HorizontalOptions="Center"
-                        BorderColor="DarkBlue"
-                        BackgroundColor="SkyBlue"
-                        TextColor="Black"
-                        CornerRadius="15"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
