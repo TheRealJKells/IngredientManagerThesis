@@ -64,6 +64,25 @@ namespace TabbedAppThesis.ViewModels
                 }); 
             }
         }
+
+        internal void ExecuteVeganAndVegetarianFilter()
+        {
+            ObservableCollection<Recipe> newList = new ObservableCollection<Recipe>();
+
+            foreach (Recipe r in Recipes)
+            {
+                if (r.IsVegan && r.IsVegetarian)
+                {
+                    newList.Add(r);
+                }
+            }
+            Recipes.Clear();
+            foreach (Recipe r in newList)
+            {
+                Recipes.Add(r);
+            }
+        }
+
         public void ExecuteLoadRecipesUser()
         {
             List<Recipe> recipes = new List<Recipe>();
@@ -73,6 +92,43 @@ namespace TabbedAppThesis.ViewModels
                 Recipes.Add(r);
             }
         }
+
+        public void ExecuteVeganFilter()
+        {
+            ObservableCollection<Recipe> newList = new ObservableCollection<Recipe>();
+
+            foreach (Recipe r in Recipes)
+            {
+                if (r.IsVegan)
+                {
+                    newList.Add(r);
+                }
+            }
+            Recipes.Clear();
+            foreach (Recipe r in newList)
+            {
+                Recipes.Add(r);
+            }
+        }
+
+        internal void ExecuteVegatarianFilter()
+        {
+            ObservableCollection<Recipe> newList = new ObservableCollection<Recipe>();
+
+            foreach (Recipe r in Recipes)
+            {
+                if (r.IsVegetarian)
+                {
+                    newList.Add(r);
+                }
+            }
+            Recipes.Clear();
+            foreach (Recipe r in newList)
+            {
+                Recipes.Add(r);
+            }
+        }
+
         public void ExecuteLoadRecipesSearch(List<string> ingredientNames)
         {
             IEnumerable<Recipe> recipes = new List<Recipe>();

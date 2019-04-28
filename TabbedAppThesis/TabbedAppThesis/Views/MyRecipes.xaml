@@ -73,7 +73,7 @@
                                     <Label Text=" minutes to make"
                                            Grid.Row="0"
                                            Grid.Column="0"
-                                           Grid.ColumnSpan="1"
+                                           Grid.ColumnSpan="2"
                                            Margin="0, 22, 0, 0"
                                            HorizontalTextAlignment="Center"
                                        />

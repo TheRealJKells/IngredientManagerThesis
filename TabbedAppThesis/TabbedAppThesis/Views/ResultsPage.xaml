@@ -13,59 +13,91 @@
                    FontSize="Medium"
                    HorizontalOptions="Center"
                    VerticalOptions="FillAndExpand"/>
-            <ListView x:Name="ItemsListView" 
-                ItemsSource="{Binding Recipes}"
-                VerticalOptions="FillAndExpand"
-                 HasUnevenRows="true"
-                 ItemSelected="OnItemSelected">
-                <!--RefreshCommand="{Binding LoadItemsCommand}"
-                 IsPullToRefreshEnabled="true"
-                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                 CachingStrategy="RecycleElement"-->
+            <Grid MinimumHeightRequest="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Vegan Filter"
+                        Clicked="Vegan_Clicked"
+                        FontSize="10"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BorderColor="DarkBlue"
+                        BackgroundColor="LightSkyBlue"
+                        TextColor="Black"
+                        CornerRadius="15"
+                        x:Name="Vegan"/>
+                <Button Text="Vegetarian Filter"
+                        Clicked="Vegetarian_Clicked"
+                        FontSize="10"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BorderColor="DarkBlue"
+                        BackgroundColor="LightSkyBlue"
+                        TextColor="Black"
+                        CornerRadius="15"
+                        x:Name="Vegetarian"/>
+            </Grid>
+            <ScrollView>
+                <ListView x:Name="ItemsListView" 
+                    ItemsSource="{Binding Recipes}"
+                    VerticalOptions="FillAndExpand"
+                     HasUnevenRows="true"
+                     ItemSelected="OnItemSelected">
+                    <!--RefreshCommand="{Binding LoadItemsCommand}"
+                     IsPullToRefreshEnabled="true"
+                     IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                     CachingStrategy="RecycleElement"-->
 
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="10">
-                                <Grid Padding="5">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Text="{Binding Name}"
-                                           Grid.Row="0"
-                                           Grid.Column="0"
-                                           LineBreakMode="NoWrap" 
-                                           FontSize="16" 
-                                           Style="{DynamicResource ListItemTextStyle}"/>
-
-                                <Label Text="{Binding TimeToMake}"
-                                           Grid.Row="0"
-                                           Grid.Column="0"
-                                           Margin="0, 25, 0, 0"
-                                           LineBreakMode="NoWrap"
-                                           FontSize="13"
-                                           HorizontalOptions="Start"
-                                           Style="{DynamicResource ListItemDetailTextStyle}"/>
-                                <Label Text=" minutes to make"
-                                           Grid.Row="0"
-                                           Grid.Column="0"
-                                           Grid.ColumnSpan="1"
-                                           Margin="0, 22, 0, 0"
-                                           HorizontalTextAlignment="Center"
-                                       />
-                                </Grid>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Grid Padding="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Name}"
+                                               TextColor="Black"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Grid.ColumnSpan="4"
+                                               LineBreakMode="NoWrap" 
+                                               FontSize="16" 
+                                               Style="{DynamicResource ListItemTextStyle}"/>
+                                        <Label Text="{Binding TimeToMake}"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Margin="0, 25, 0, 0"
+                                               LineBreakMode="NoWrap"
+                                               FontSize="13"
+                                               HorizontalOptions="Start"
+                                               Style="{DynamicResource ListItemDetailTextStyle}"/>
+                                        <Label Text="minutes to make"
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                               Grid.ColumnSpan="2"
+                                               Margin="0, 22, 0, 0"
+                                               HorizontalTextAlignment="Center"
+                                           />
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

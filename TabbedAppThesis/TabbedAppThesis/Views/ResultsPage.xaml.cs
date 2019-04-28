@@ -32,8 +32,6 @@ namespace TabbedAppThesis.Views
                 {
                     Text = ingredientList.ElementAt(i)
                 };
-                //ResultsStack.Children.Add(myLabel);
-                //I am adding some more stuff
             }
 
         }
@@ -60,6 +58,72 @@ namespace TabbedAppThesis.Views
             //if (viewModel.Recipes.Count == 0)
             //    viewModel.LoadItemsCommand.Execute(null);
         }
+
+        private void Vegan_Clicked(object sender, EventArgs e)
+        {
+            viewModel2.Recipes.Clear();
+            viewModel2.ExecuteLoadRecipesSearch(ingredientList);
+            Button b = sender as Button;
+            if (b.BackgroundColor == Color.LightSkyBlue)
+            {
+                if (Vegetarian.BackgroundColor == Color.DarkBlue)
+                {
+                    viewModel2.ExecuteVeganAndVegetarianFilter();
+                }
+                else
+                {
+                    viewModel2.ExecuteVeganFilter();
+                }
+                b.BackgroundColor = Color.DarkBlue;
+                b.TextColor = Color.White;
+            }
+            else
+            {
+                if (Vegetarian.BackgroundColor == Color.DarkBlue)
+                {
+                    viewModel2.ExecuteVegatarianFilter();
+                }
+                else
+                {
+
+                }
+                b.BackgroundColor = Color.LightSkyBlue;
+                b.TextColor = Color.Black;
+
+            }
+        }
+
+        private void Vegetarian_Clicked(object sender, EventArgs e)
+        {
+            viewModel2.Recipes.Clear();
+            viewModel2.ExecuteLoadRecipesSearch(ingredientList);
+            Button b = sender as Button;
+            if (b.BackgroundColor == Color.LightSkyBlue)
+            {
+                if (Vegan.BackgroundColor == Color.DarkBlue)
+                {
+                    viewModel2.ExecuteVeganAndVegetarianFilter();
+                }
+                else
+                {
+                    viewModel2.ExecuteVegatarianFilter();
+                }
+                b.BackgroundColor = Color.DarkBlue;
+                b.TextColor = Color.White;
+            }
+            else
+            {
+                if (Vegan.BackgroundColor == Color.DarkBlue)
+                {
+                    viewModel2.ExecuteVeganFilter();
+                }
+                else
+                {
+                   
+                }
+                b.BackgroundColor = Color.LightSkyBlue;
+                b.TextColor = Color.Black;
+            }
+        }
     }
-    
 }
