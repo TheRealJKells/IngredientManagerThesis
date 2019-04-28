@@ -31,15 +31,9 @@
                  VerticalOptions="FillAndExpand"
                  HasUnevenRows="true"
                  ItemSelected="OnItemSelected">
-                 <!--RefreshCommand="{Binding LoadItemsCommand}"
-                 IsPullToRefreshEnabled="true"
-                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                 CachingStrategy="RecycleElement"-->
-                
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-
                             <StackLayout BackgroundColor="{Binding MainColor}"
                                          x:Name="myLayout">
                             <Grid Padding="5">
@@ -54,14 +48,14 @@
                                     <ColumnDefinition/>
                                 </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Name}"
-                                       TextColor="Black"
-                                       Grid.Row="0"
-                                       Grid.Column="0"
-                                       LineBreakMode="NoWrap" 
-                                       FontSize="16" 
-                                       HorizontalOptions="Start"
-                                       FontAttributes="Bold"
-                                       Style="{DynamicResource ListItemTextStyle}"/>
+                                           TextColor="Black"
+                                           Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="4"
+                                           LineBreakMode="NoWrap" 
+                                           FontSize="16" 
+                                           HorizontalOptions="Start"
+                                           Style="{DynamicResource ListItemTextStyle}"/>
                                     <Label Text="{Binding TimeToMake}"
                                            Grid.Row="0"
                                            Grid.Column="0"
@@ -75,8 +69,7 @@
                                            Grid.Column="0"
                                            Grid.ColumnSpan="2"
                                            Margin="0, 22, 0, 0"
-                                           HorizontalTextAlignment="Center"
-                                       />
+                                           HorizontalTextAlignment="Center"/>
                                     <Button Text="Delete"
                                         Grid.Row="0"
                                         Grid.Column="4"

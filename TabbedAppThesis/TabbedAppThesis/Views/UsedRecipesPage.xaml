@@ -16,10 +16,11 @@
                    HorizontalOptions="Center"
                    VerticalOptions="FillAndExpand"/>
             <ListView x:Name="ItemsListView" 
-                ItemsSource="{Binding Recipes}"
-                VerticalOptions="FillAndExpand"
-                 HasUnevenRows="true"
-                 ItemSelected="OnItemSelected">
+                      ItemsSource="{Binding Recipes}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="true"
+                      ItemSelected="OnItemSelected"
+                      SeparatorColor="Black">
                 <!--RefreshCommand="{Binding LoadItemsCommand}"
                  IsPullToRefreshEnabled="true"
                  IsRefreshing="{Binding IsBusy, Mode=OneWay}"
@@ -29,7 +30,7 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Grid Padding="10">
+                            <Grid Padding="5">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
@@ -44,6 +45,7 @@
                                 <Label Text="{Binding Name}"
                                        Grid.Row="0"
                                        Grid.Column="0"
+                                       Grid.ColumnSpan="4"
                                        LineBreakMode="NoWrap" 
                                        FontSize="16" 
                                        HorizontalOptions="Start"
@@ -61,7 +63,7 @@
                                 <Label Text=" minutes to make"
                                            Grid.Row="0"
                                            Grid.Column="0"
-                                           Grid.ColumnSpan="1"
+                                           Grid.ColumnSpan="2"
                                            Margin="0, 22, 0, 0"
                                            HorizontalTextAlignment="Center"
                                        />

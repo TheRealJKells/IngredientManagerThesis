@@ -44,10 +44,11 @@
             </Grid>
             <ScrollView>
                 <ListView x:Name="ItemsListView" 
-                    ItemsSource="{Binding Recipes}"
-                    VerticalOptions="FillAndExpand"
-                     HasUnevenRows="true"
-                     ItemSelected="OnItemSelected">
+                          ItemsSource="{Binding Recipes}"
+                          VerticalOptions="FillAndExpand"
+                          HasUnevenRows="true"
+                          ItemSelected="OnItemSelected"
+                          SeparatorColor="Black">
                     <!--RefreshCommand="{Binding LoadItemsCommand}"
                      IsPullToRefreshEnabled="true"
                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
