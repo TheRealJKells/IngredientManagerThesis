@@ -19,6 +19,7 @@ namespace TabbedAppThesis.ViewModels
         public Color SwitchColor { get; set; }
         public Color MainColor { get; set; }
         public Color Color { get; set; }
+        
        
 
 

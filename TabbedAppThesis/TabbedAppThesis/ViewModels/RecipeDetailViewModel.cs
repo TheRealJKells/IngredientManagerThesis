@@ -9,8 +9,12 @@ namespace TabbedAppThesis.ViewModels
     public class RecipeDetailViewModel : BaseViewModel
     {
         public Recipe Recipe { get; set; }
+        public string AuthorName { get; set; }
+        public string TimeToMakeMinutes { get; set; }
         public RecipeDetailViewModel(Recipe recipe = null)
         {
+            AuthorName = "Author: " + App.SessionUser.Username;
+            TimeToMakeMinutes = recipe?.TimeToMake + " minutes";
             Title = recipe?.Name;
             Recipe = recipe;
         }

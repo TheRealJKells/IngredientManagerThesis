@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TabbedAppThesis.Views.ItemDetailPage"
              Title="{Binding Title}">
-    <StackLayout>    
+    <StackLayout>
+        <Label Text="{Binding AuthorName}"
+               FontSize="Small"
+               HorizontalTextAlignment="Center"/>
         <ScrollView>
             <StackLayout Spacing="20" Padding="15">
                 <Label Text="Name:" FontSize="Medium" TextColor="black"/>
@@ -13,7 +16,7 @@
                 <Label Text="How to make:" FontSize="Medium" TextColor="black" />
                 <Label Text="{Binding Recipe.HowTo}" FontSize="Small"/>
                 <Label Text="Time to make:" FontSize="Medium" TextColor="black" />
-                <Label Text="{Binding Recipe.TimeToMake}" FontSize="Small"/>
+                <Label Text="{Binding TimeToMakeMinutes}" FontSize="Small"/>
                 <Label Text="Ingredient List:" FontSize="Medium" TextColor="black"/>
                 <Label Text="{Binding StringIngredientList}" FontSize="Small"/>
                 <Label Text="Is it Vegan?" FontSize="Medium"  TextColor="black"/>

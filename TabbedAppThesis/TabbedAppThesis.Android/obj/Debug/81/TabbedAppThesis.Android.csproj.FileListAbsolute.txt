@@ -103,6 +103,4 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Andr
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\bin\Debug\netstandard2.0\TabbedAppThesis.dll
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\bin\Debug\TabbedAppThesis.dll.mdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis.Android\obj\Debug\81\linksrc\TabbedAppThesis.dll.mdb

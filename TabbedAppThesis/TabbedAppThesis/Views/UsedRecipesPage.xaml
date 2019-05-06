@@ -49,7 +49,6 @@
                                        LineBreakMode="NoWrap" 
                                        FontSize="16" 
                                        HorizontalOptions="Start"
-                                       FontAttributes="Bold"
                                        Style="{DynamicResource ListItemTextStyle}"/>
 
                                 <Label Text="{Binding TimeToMake}"
