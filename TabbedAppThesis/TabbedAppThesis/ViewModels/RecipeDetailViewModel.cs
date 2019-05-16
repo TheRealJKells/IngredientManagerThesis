@@ -13,7 +13,7 @@ namespace TabbedAppThesis.ViewModels
         public string TimeToMakeMinutes { get; set; }
         public RecipeDetailViewModel(Recipe recipe = null)
         {
-            AuthorName = "Author: " + App.SessionUser.Username;
+            AuthorName = "Author: " + App.LiteDB.GetUserByRecipeID(recipe.ID).Username;
             TimeToMakeMinutes = recipe?.TimeToMake + " minutes";
             Title = recipe?.Name;
             Recipe = recipe;

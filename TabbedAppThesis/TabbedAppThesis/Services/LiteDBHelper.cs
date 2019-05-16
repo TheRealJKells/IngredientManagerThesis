@@ -161,6 +161,16 @@ namespace TabbedAppThesis.Services
             userCollection.Delete(a => a.ID == ID);
         }
 
+        public User GetUserByRecipeID(Guid id)
+        {
+            userCollection.EnsureIndex(x => x.Username);
+            var user = userCollection.Find(i => i.RecipesCreated.Contains(id)).FirstOrDefault();
+
+            User myUser = user as User;
+            return myUser;
+
+        }
+
         //Recipes functions
         //*******************************************
         public IEnumerable<Recipe> GetRecipesByIngredientName(List<string> names)
