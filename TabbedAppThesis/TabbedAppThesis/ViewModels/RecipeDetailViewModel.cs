@@ -21,7 +21,6 @@ namespace TabbedAppThesis.ViewModels
 
         public bool IsInCollection
         {
-           
             get
             {
                 bool retVal = false;

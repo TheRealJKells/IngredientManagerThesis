@@ -13,6 +13,7 @@ namespace TabbedAppThesis.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string HowTo { get; set; }
+        public int Hits { get; set; }
         public int TimeToMake { get; set; }
         public bool IsVegan { get; set; }
         public bool IsVegetarian { get; set; }

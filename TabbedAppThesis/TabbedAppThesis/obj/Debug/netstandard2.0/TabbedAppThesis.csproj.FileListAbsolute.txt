@@ -2,7 +2,6 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\bin\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\bin\Debug\netstandard2.0\TabbedAppThesis.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\bin\Debug\netstandard2.0\TabbedAppThesis.pdb
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\Views\EditRecipePage.xaml.g.cs
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
@@ -19,3 +18,4 @@ C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\TabbedAppThesis.dll
 C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\TabbedAppThesis.pdb
+C:\Users\jorda\source\repos\TabbedAppThesis\TabbedAppThesis\TabbedAppThesis\obj\Debug\netstandard2.0\TabbedAppThesis.csprojAssemblyReference.cache

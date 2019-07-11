@@ -33,6 +33,7 @@ namespace TabbedAppThesis.Views
 
             viewModel = new RecipeDetailViewModel(recipe);
             BindingContext = viewModel;
+           
         }
 
         private void Button_Clicked(object sender, EventArgs e)

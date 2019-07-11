@@ -54,6 +54,7 @@ namespace TabbedAppThesis.Views
             viewModel2.Recipes.Clear();
             viewModel2.ExecuteLoadRecipesSearch(ingredientList);
             noRecipes.IsVisible = viewModel2.Recipes.Count == 0 ? true : false;
+            
 
             //if (viewModel.Recipes.Count == 0)
             //    viewModel.LoadItemsCommand.Execute(null);

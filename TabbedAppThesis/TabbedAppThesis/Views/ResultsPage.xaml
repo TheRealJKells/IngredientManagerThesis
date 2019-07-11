@@ -92,6 +92,14 @@
                                                Margin="0, 22, 0, 0"
                                                HorizontalTextAlignment="Center"
                                            />
+                                        <Label 
+                                            x:Name="hitsLabel"
+                                            Text="{Binding Hits}"
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            Grid.ColumnSpan="2"
+                                            Margin="0, 22, 0, 0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
                                 </StackLayout>
                             </ViewCell>

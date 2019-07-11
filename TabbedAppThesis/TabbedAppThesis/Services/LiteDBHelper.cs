@@ -94,7 +94,7 @@ namespace TabbedAppThesis.Services
         public User GetUser(User loginUser)
         {
             userCollection.EnsureIndex(x => x.Username);
-            //User user = new User(userCollection.Find(Query.Where("Username", i => i.Equals(loginUser.Username))).FirstOrDefault());
+       
             var user = userCollection.Find(Query.Where("Username", i => i.Equals(loginUser.Username))).FirstOrDefault();
             if (user != null)
             {
@@ -104,7 +104,7 @@ namespace TabbedAppThesis.Services
                 }
             }
 
-            //User user = GetAllUsers().Where("Users", a => a.Username == loginUser.Username);
+        
             return user;
         }
 

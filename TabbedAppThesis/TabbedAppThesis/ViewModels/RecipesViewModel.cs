@@ -19,6 +19,8 @@ namespace TabbedAppThesis.ViewModels
         public Color SwitchColor { get; set; }
         public Color MainColor { get; set; }
         public Color Color { get; set; }
+        public string Hits { get; set; }
+        public int HitCounter { get; set; }
         
        
 
@@ -30,15 +32,16 @@ namespace TabbedAppThesis.ViewModels
             Title = App.SessionUser.Username + "'s Recipes";
             TitleTwo = App.SessionUser.Username + "'s Saved Recipes";
             Recipes = new ObservableCollection<Recipe>();
-           
+            HitCounter = 0;
+
             if (App.LiteDB.GetAllRecipes().Count == 0)
             {
                 var mockRecipes = new List<Recipe>
                 {
                     new Recipe {Name = "Fruit salad", Description = "Yummy yummy", HowTo = "Mix fruit and salad",
-                     IngredientList = new List<string> {"fruit", "salad"}, IsVegan = true, IsVegetarian = true, TimeToMake = 10},
+                     IngredientList = new List<string> {"fruit", "salad"}, IsVegan = true, IsVegetarian = true, TimeToMake = 10, Hits = 0},
                      new Recipe {Name = "Alex salad", Description = "Yummy yummy", HowTo = "Mix Alex and salad",
-                     IngredientList = new List<string> {"Alex", "salad"}, IsVegan = true, IsVegetarian = true, TimeToMake = 12},
+                     IngredientList = new List<string> {"Alex", "salad"}, IsVegan = true, IsVegetarian = true, TimeToMake = 12, Hits = 0},
                 };
                 User user = App.LiteDB.GetUserByUsernameUser("user");
                 foreach (Recipe r in mockRecipes)
